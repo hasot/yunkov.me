@@ -103,11 +103,6 @@ const Home = () => (
                     Born in Beloyarsky (Белоярский ХМАО), Russia.
                 </BioSection>
                 <BioSection>
-                    <BioYear>2018</BioYear>
-                    Completed the Bachelor&apos;s Program in the Information technology of
-                    communication systems at Southern Federal University (former Rostov State University)
-                </BioSection>
-                <BioSection>
                     <BioYear>2017</BioYear>
                     Worked at <Link
                         as={NextLink}
@@ -117,6 +112,11 @@ const Home = () => (
                     >
                         Nosota
                     </Link> as a full-stack developer(Angular, Typescript, Java)! Rostov-on-Don, Russia
+                </BioSection>
+                <BioSection>
+                    <BioYear>2018</BioYear>
+                    Completed the Bachelor&apos;s Program in the Information technology of
+                    communication systems at Southern Federal University (former Rostov State University)
                 </BioSection>
                 <BioSection>
                     <BioYear>2019</BioYear>
@@ -142,7 +142,7 @@ const Home = () => (
                 </BioSection>
                 <BioSection>
                     <BioYear>2021</BioYear>
-                    Remote remotely Worked at <Link
+                    Worked remotely at <Link
                         as={NextLink}
                         href="https://inno.tech/"
                         passHref
@@ -153,7 +153,7 @@ const Home = () => (
                 </BioSection>
                 <BioSection>
                     <BioYear>2022 to present</BioYear><br />
-                    Working remotely at <Link
+                    Have been working remotely at <Link
                         as={NextLink}
                         href="https://overgear.com/"
                         passHref
