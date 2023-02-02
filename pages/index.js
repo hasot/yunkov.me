@@ -78,7 +78,7 @@ const Home = () => (
                     relevant technologies. My core skills are JavaScript, Typesctipts, ReactJS. When
                     not online, I love travel a lot with my friend. I have been more 5 countries
                     and uncountable cities for last year. I also do various sports from basketball
-                    to various extreme sports. Currently, I'am working in a great Overgear team and get
+                    to various extreme sports. Currently, I&apos;am working in a great Overgear team and get
                     a lot of new experience every day
                 </Paragraph>
                 {/* <Box align="center" my={4}>
