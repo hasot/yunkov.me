@@ -2,12 +2,12 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic'
 import NavBar from '../navbar.js';
 import { Box, Container } from '@chakra-ui/react';
-import VoxelDogLoader from '../gltf-loader'
+import GltfLoader from '../gltf-loader'
 import Footer from '../footer.js';
 
-const LazyVoxelDog = dynamic(() => import('../gltf-model'), {
+const LazyModel = dynamic(() => import('../gltf-model'), {
     ssr: false,
-    loading: () => <VoxelDogLoader />
+    loading: () => <GltfLoader />
 })
 const Main = ({ children, router }) => {
 
@@ -18,11 +18,13 @@ const Main = ({ children, router }) => {
                 <title>Dmitry Yunkov - Homepage</title>
                 <meta name="description" content="Dmitry Yunkov personal website" />
                 <meta name="og:title" property="og:title" content="Dmitry Yunkov - Homepage" />
+                <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+                <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
             </Head>
 
             <NavBar path={router.asPath} />
             <Container maxW="container.md" pt={14}>
-                <LazyVoxelDog />
+                <LazyModel />
                 {children}
                 <Footer />
             </Container>
