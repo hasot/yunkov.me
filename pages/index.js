@@ -160,7 +160,7 @@ const Home = () => (
                         target="_blank"
                     >
                         Overgear
-                    </Link> as a front-end developer (ReactJS, Typescript, Storybook, Jes, GraphQL)! Nicosia, Cyprus
+                    </Link> as a front-end developer (ReactJS, Typescript, Jest, GraphQL)! Nicosia, Cyprus
                 </BioSection>
             </Section>
 
