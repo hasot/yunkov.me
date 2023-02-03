@@ -12,7 +12,9 @@ const GltfModel = () => {
   const refContainer = useRef()
   const [loading, setLoading] = useState(true)
   const refRenderer = useRef()
-  const urlDogGLB = '/mac.glb'
+  const refGLB = useRef()
+  const urlGLB = '/mac.glb'
+  let isMacTurnOn = false
 
   const handleWindowResize = useCallback(() => {
     const { current: renderer } = refRenderer
@@ -24,6 +26,20 @@ const GltfModel = () => {
       renderer.setSize(scW, scH)
     }
   }, [])
+
+
+  const handleOnCLick = useCallback(() => {
+    const { current: glb } = refGLB
+
+    if (glb ) {
+      if (!isMacTurnOn) {
+        glb.children[0].children[15].children[4].material.color.set('#fff')
+      } else {
+        glb.children[0].children[15].children[4].material.color.set('#000')
+      }
+      isMacTurnOn = !isMacTurnOn;
+    }
+  }, [isMacTurnOn])
 
   /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
@@ -71,10 +87,11 @@ const GltfModel = () => {
       controls.autoRotate = true
       controls.target = target
 
-      loadGLTFModel(scene, urlDogGLB, {
+      loadGLTFModel(scene, urlGLB, {
         receiveShadow: false,
         castShadow: false
-      }).then(() => {
+      }).then((glb) => {
+        refGLB.current = glb
         animate()
         setLoading(false)
       })
@@ -112,9 +129,15 @@ const GltfModel = () => {
   }, [])
 
   useEffect(() => {
+    const { current: container } = refContainer
+
     window.addEventListener('resize', handleWindowResize, false)
+    container?.addEventListener('click', handleOnCLick, false)
+
     return () => {
       window.removeEventListener('resize', handleWindowResize, false)
+      container?.removeEventListener('click', handleOnCLick, false)
+
     }
   }, [handleWindowResize])
 
