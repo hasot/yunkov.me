@@ -74,12 +74,11 @@ const Home = () => (
                     Work
                 </Heading>
                 <Paragraph>
-                    I’m a front end developer. As well I have all the necessary knowledge of basic
-                    relevant technologies. My core skills are JavaScript, Typesctipts, ReactJS. When
-                    not online, I love travel a lot with my friend. I have been more 5 countries
-                    and uncountable cities for last year. I also do various sports from basketball
-                    to various extreme sports. Currently, I&apos;am working in a great Overgear team and get
-                    a lot of new experience every day
+                    I&apos;m a front end developer. I have all the necessary knowledge of basic relevant technologies.
+                    My core skills are JavaScript, Typesctipts, ReactJS. In my spare time I love traveling with my
+                    friends. I`ve been to more than 5 countries and numerous cities for the last year. Basketball
+                    and some extreme sports are my passion, I enjoy being active. Currently, I work in a great
+                    Overgear team and get new experience every day.
                 </Paragraph>
                 {/* <Box align="center" my={4}>
                     <Button
@@ -169,7 +168,7 @@ const Home = () => (
                     I ♥
                 </Heading>
                 <Paragraph>
-                    bascketball,
+                    basketball,
                     music,
                     traveling,
                     a lot of food
